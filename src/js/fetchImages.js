@@ -5,7 +5,7 @@ const filtersAPI = 'image_type=photo&orientation=horizontal&safesearch=true';
 
 async function fetchImages(searchImage, page) {
     try {
-        const response = await axios.get(`${BASEURL}?key=${pixabayKEY}&q=${searchImage}&${filtersAPI}&&page=${page}&per_page=6`);
+        const response = await axios.get(`${BASEURL}?key=${pixabayKEY}&q=${searchImage}&${filtersAPI}&&page=${page}&per_page=40`);
         return response.data;
     } catch (error) {
         console.error(`Что-то пошло не так, ${error}`);
