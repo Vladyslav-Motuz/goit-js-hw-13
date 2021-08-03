@@ -6,37 +6,36 @@
 // Стили для файла с примером HTML-фрагмента
 html {
   box-sizing: border-box;
-  width: 100vw;
 }
 
 body {
-    width: 100vw;
+  width: 100%;
 }
-.search-form {    
-    display: block;
-    margin-bottom: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: rgb(65, 105, 225);
+.search-form {
+  display: block;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(65, 105, 225);
 }
 .search-form input {
-    border: none;
+  border: none;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;    
-    text-align: center;
-    border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .search-form button {
-    border: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border-radius: 5px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .gallery img {
@@ -46,31 +45,31 @@ body {
 }
 
 .gallery {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .load-more {
-    border: none;
-    border-radius: 15px;
-    display: block;
-    width: 150px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    background-color: rgb(65, 105, 225);
+  border: none;
+  border-radius: 15px;
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  background-color: rgb(65, 105, 225);
 }
 
 .info {
-    text-align: center;
-    display: flex;
+  text-align: center;
+  display: flex;
 }
 
 .info p {
-    margin: 5px;
+  margin: 5px;
 }

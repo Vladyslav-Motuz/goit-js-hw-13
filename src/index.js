@@ -1,7 +1,8 @@
 import './sass/main.scss';
 
 import { Notify } from 'notiflix';
-
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import API from './js/fetchImages';
 import galleryItem from './templates/galleryItem.hbs';
 
@@ -12,6 +13,7 @@ const loadButton = document.querySelector('.load-more');
 let page = 1;
 let data = '';
 loadButton.style.visibility = 'hidden';
+let gallery = new SimpleLightbox('.gallery a');
 
 function addImages(data, page) {
     API.fetchImages(data, page).then(images => {
@@ -26,6 +28,9 @@ function addImages(data, page) {
         }
         const markup = galleryItem(images.hits);
         galleryList.insertAdjacentHTML('beforeend', markup);
+
+        gallery = new SimpleLightbox('.gallery a');
+        gallery.on('show.simplelightbox');
     })
 };
 
@@ -42,6 +47,8 @@ function onSearchImage(event) {
 function onClickLoadmore(event) {
     page += 1;
     addImages(data, page);
+
+    gallery.refresh();
 };
 
 formEL.addEventListener('submit', onSearchImage);
